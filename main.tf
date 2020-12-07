@@ -9,7 +9,8 @@ data "aws_iam_policy_document" "default" {
 }
 
 module "s3_user" {
-  source        = "git::https://github.com/cloudposse/terraform-aws-iam-system-user.git?ref=tags/0.17.0"
+  source        = "git::ssh://git@github.com/jurgenweber/terraform-aws-iam-system-user.git?ref=master"
+  # source        = "git::https://github.com/cloudposse/terraform-aws-iam-system-user.git?ref=tags/0.17.0"
   namespace     = var.namespace
   stage         = var.stage
   environment   = var.environment
